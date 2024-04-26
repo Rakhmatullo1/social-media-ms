@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: auth-service
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+
+keycloak:
+  clientId: demo
+  clientSecret: demo
+  serverUrl: http://localhost:9080
+  realm: dev
+  username: user-manager
+  password: 1111
+  scope: openid
+
+
+logging:
+  level:
+    web: info

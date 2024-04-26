@@ -1,0 +1,28 @@
+spring:
+  application:
+    name:
+      chat-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/social_media
+    username: raaxiim
+    password: Raax11m17
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  liquibase:
+    change-log: classpath:/sql/changelog-master.xml
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9080/realms/dev
+
+server:
+  port: 8085
+
+keycloak:
+  username: user-manager
+  password: 1111
+  clientId: demo
+  clientSecret: demo
+  scope: openid
+  serverUrl: http://localhost:9080
+  realm: dev

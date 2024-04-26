@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: notification-service
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/social_media
+    username: raaxiim
+    password: Raax11m17
+  liquibase:
+    change-log: sql/changelog-master.xml
+    url: jdbc:mysql://localhost:3306/social_media
+    user: raaxiim
+    password: Raax11m17
+
+keycloak:
+  realm: dev
+  username: user-manager
+  password: 1111
+  clientId: demo
+  clientSecret: demo
+  scope: openId
+  serverUrl: http://localhost:9080
+server:
+  port: 8084
